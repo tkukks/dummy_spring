@@ -1,0 +1,16 @@
+version 2.0:
+
+phases:
+  install:
+    runtime-version:
+      java: correto8
+  pre_build:
+    commands:
+      - echo Building jar actually a war
+      - mvn install
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/demo-1.0.war
